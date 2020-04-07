@@ -16,6 +16,10 @@
   min-height: 500px;
 }
 
+h2.call {
+  font-size: 30pt;
+}
+
 /*Price tables*/
 
 section.pricing {

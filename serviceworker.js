@@ -1,4 +1,4 @@
-const filesToCache = ["", "index.html"];
+const filesToCache = ["", "index.html", "/style/custom.css"];
 
 var staticCacheName = "skovfix-v1";
 

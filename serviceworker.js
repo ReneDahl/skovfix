@@ -46,8 +46,12 @@ self.addEventListener("fetch", event => {
       })
       .catch(error => {
         // TODO 6 - Respond with custom offline page
-        console.log("Error, ", error);
-        return caches.match("offline.html");
+        //console.log("Error, ", error);
+        ProgressiveKITT.addAlert(
+          "You are currently offline." +
+            "The content of this page may be out of date."
+        );
+        return caches.match(event.request);
       })
   );
 });

@@ -8,9 +8,11 @@ if ("serviceWorker" in navigator) {
 //
 
 //Install the app...
+// Code to handle install prompt on desktop
+
 let deferredPrompt;
 const addBtn = document.querySelector(".add-button");
-addBtn.style.display = "none";
+//addBtn.style.display = "block";
 
 window.addEventListener("beforeinstallprompt", e => {
   // Prevent Chrome 67 and earlier from automatically showing the prompt
@@ -28,9 +30,9 @@ window.addEventListener("beforeinstallprompt", e => {
     // Wait for the user to respond to the prompt
     deferredPrompt.userChoice.then(choiceResult => {
       if (choiceResult.outcome === "accepted") {
-        console.log("User accepted the shopping list prompt");
+        console.log("User accepted the A2HS prompt");
       } else {
-        console.log("User dismissed the shopping list prompt");
+        console.log("User dismissed the A2HS prompt");
       }
       deferredPrompt = null;
     });

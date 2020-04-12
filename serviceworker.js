@@ -6,10 +6,10 @@ const filesToCache = [
   "offline.html",
   //css
   "/style/custom.css",
-  "progressive-ui-kitt/themes/flat.css",
+  "/progressive-ui-kitt/themes/flat.css",
   //js
   "script.js",
-  "progressive-ui-kitt/progressive-ui-kitt.js"
+  "/progressive-ui-kitt/progressive-ui-kitt.js"
 ];
 
 var staticCacheName = "skovfix-v1";

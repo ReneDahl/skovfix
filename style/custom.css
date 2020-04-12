@@ -19,3 +19,9 @@
 h2.call {
   font-size: 30pt;
 }
+
+@media (min-width: 576px) {
+  .displayBlock {
+    display: none;
+  }
+}

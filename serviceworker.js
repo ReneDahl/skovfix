@@ -44,7 +44,7 @@ self.addEventListener("fetch", event => {
           });
         });
       })
-      .catch(error => {
+      .catch(function () {
         // TODO 6 - Respond with custom offline page
         //console.log("Error, ", error);
         ProgressiveKITT.addAlert(

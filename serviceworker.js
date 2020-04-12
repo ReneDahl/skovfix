@@ -1,9 +1,13 @@
+importScripts("progressive-ui-kitt/progressive-ui-kitt-sw-helper.js");
 const filesToCache = [
   "",
+  //html
   "index.html",
+  "offline.html",
+  //css
   "/style/custom.css",
-  "script.js",
-  "offline.html"
+  //js
+  "script.js"
 ];
 
 var staticCacheName = "skovfix-v1";

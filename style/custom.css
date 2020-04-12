@@ -71,3 +71,52 @@ section.pricing {
   opacity: 0.7;
   transition: all 0.2s;
 }
+.offline-notification {
+  transition: transform 0.3s;
+  transform: translateY(-100%) translateX(-50%);
+  position: fixed;
+  left: 50%;
+  background: #222;
+  color: white;
+  padding: 0.5em;
+  text-align: center;
+}
+.offline-notification a {
+  color: white;
+}
+.offline-notification a:visited {
+  color: white;
+}
+.offline-notification:hover .offline-notification_explanation {
+  display: block;
+}
+.offline-notification_explanation {
+  display: none;
+  background: inherit;
+  padding-top: 1em;
+}
+.cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: space-around;
+}
+.offline-msg {
+  display: none;
+}
+.offline .offline-notification {
+  transition: transform 0.3s;
+  transform: translateY(0) translateX(-50%);
+}
+.offline .online-msg {
+  display: none;
+}
+.offline .offline-msg {
+  display: block;
+}
+body,
+html {
+  margin: 0;
+  height: 200vh;
+}

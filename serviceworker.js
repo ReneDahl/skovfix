@@ -1,4 +1,3 @@
-importScripts("progressive-ui-kitt/progressive-ui-kitt-sw-helper.js");
 const filesToCache = [
   "",
   //html
@@ -6,10 +5,9 @@ const filesToCache = [
   "offline.html",
   //css
   "/style/custom.css",
-  "/progressive-ui-kitt/themes/flat.css",
+
   //js
-  "script.js",
-  "/progressive-ui-kitt/progressive-ui-kitt.js"
+  "script.js"
 ];
 
 var staticCacheName = "skovfix-v1";
@@ -44,14 +42,10 @@ self.addEventListener("fetch", event => {
           });
         });
       })
-      .catch(function () {
+      .catch(error => {
         // TODO 6 - Respond with custom offline page
-        //console.log("Error, ", error);
-        ProgressiveKITT.addAlert(
-          "You are currently offline." +
-            "The content of this page may be out of date."
-        );
-        return caches.match(event.request);
+        console.log("Error, ", error);
+        return caches.match("offline.html");
       })
   );
 });

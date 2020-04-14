@@ -1,3 +1,6 @@
+importScripts('https://www.skov-fix.dk/serviceworker.js');
+importScripts('https://cdn.onesignal.com/sdks/OneSignalSDKWorker.js');
+
 const filesToCache = [
   "",
   //html
@@ -70,11 +73,11 @@ self.addEventListener("activate", event => {
 
 UserOnline = function () {
   //use progressive ui kitt to tell the user, he or her is
-  return console.log("dsdsds");
+  return console.log("er online");
 };
 
 self.addEventListener("sync", function (event) {
-  if (event.tag === "sync-reservations") {
+  if (event.tag === "users-online") {
     event.waitUntil(UserOnline());
   }
 });

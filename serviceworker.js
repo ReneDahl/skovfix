@@ -67,3 +67,14 @@ self.addEventListener("activate", event => {
     })
   );
 });
+
+UserOnline = function () {
+  //use progressive ui kitt to tell the user, he or her is
+  return console.log("dsdsds");
+};
+
+self.addEventListener("sync", function (event) {
+  if (event.tag === "sync-reservations") {
+    event.waitUntil(UserOnline());
+  }
+});

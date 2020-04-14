@@ -1,7 +1,11 @@
-if ("serviceWorker" in navigator) {
+if ("serviceWorker" in navigator && "SyncManager" in window) {
   //checks if there exist a service worker...
   navigator.serviceWorker.register("serviceworker.js").then(function () {
     console.log("Service Worker Registered");
+  });
+
+  navigator.serviceWorker.ready.then(function (registration) {
+    registration.sync.register("sync-reservations");
   });
 }
 

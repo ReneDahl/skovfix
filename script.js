@@ -1,11 +1,10 @@
 if ("serviceWorker" in navigator && "SyncManager" in window) {
   //checks if there exist a service worker...
-  navigator.serviceWorker.register("/OneSignalSDKWorker.js").then(function () {
+  navigator.serviceWorker.register("serviceworker.js").then(function () {
     console.log("Service Worker Registered");
   });
 
-  navigator.serviceWorker.ready.then(function (registration) 
-  {
+  navigator.serviceWorker.ready.then(function (registration) {
     registration.sync.register("users-online");
   });
 

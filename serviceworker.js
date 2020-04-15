@@ -1,9 +1,10 @@
 const filesToCache = [
-  "/",
+  "",
   //html
   "index.html",
   "offline.html",
   //css
+  "/style/sticky",
   "/style/custom.css",
 
   //js

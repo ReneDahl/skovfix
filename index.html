@@ -156,40 +156,13 @@
     <h2 class="mt-5 text-center pt-5">Opgaver</h2>
     <p class="text-center">Skriv navn, telefonnummer og hvad du skal have lavet, så vender jeg tilbage med et uforpligtende tilbud. </p>
   <div class="container mt-5">
-    <form onsubmit="submitForm(event)" onkeydown="return event.key != 'Enter';">
-    <div class="row mt-5">
-    
-
- 
-      <div class="col-md-6">
-        <div class="form-group">
-          <input class="form-control" id="name" placeholder="Dit navn"/>
-        </div>
-        <div class="form-group">
-          <input class="form-control" placeholder="Dit telefonnummer"/>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="form-group">
-          <input class="form-control"  onclick="inputAddTask()" id="input-id" placeholder="Indtast opgaver, og tryk på enter"/>
-        </div>
-        <div class="form-group">
-          <ul  class="list-group">
-          <li class="list-group-item">Task 1</li>
-          <li class="list-group-item">Task 2</li>
-          <li class="list-group-item">Task 3</li>
-          <li class="list-group-item">Task 4</li>
-          </ul>
-        </div>
-
-      </div>
- 
-<div class="col-md-12 pb-5">
-  <input type="submit" class="btn btn-primary col-md-12 " value="send"/>
-</div>
-
-    </div>
+    <form id="new-todo-form" method="POST" action="#">
+      <input type="text" name="new-todo" id="new-todo" class="form-control" placeholder="Tilføj opgaver..." required>
     </form>
+
+    <ul id="todo-items" class="list-group mt-5 pb-5"></ul>
+  
+
 
   </div>
   </div>

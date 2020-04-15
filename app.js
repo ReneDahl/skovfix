@@ -1,3 +1,7 @@
+window.onload = function () {
+  alert("app script loaded...");
+};
+
 var submitForm = function (event) {
   if (event.keyCode == 13) {
     event.preventDefault();

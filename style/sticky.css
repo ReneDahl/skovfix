@@ -6,10 +6,10 @@ html {
 }
 body {
   /* Margin bottom by footer height */
-  margin-bottom: 120px;
+  margin-bottom: 60px;
 }
 .push {
-  height: 60px;
+  height: 0px;
 }
 .footer {
   position: absolute;
@@ -27,7 +27,7 @@ body {
 /* Not required for template or sticky footer method. */
 
 body > .container {
-  padding: 120px 15px 0;
+  padding: 0px 15px 0;
 }
 
 .footer > .container {

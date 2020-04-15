@@ -4,7 +4,6 @@ const filesToCache = [
   "index.html",
   "offline.html",
   //css
-  "/style/sticky",
   "/style/custom.css",
 
   //js
